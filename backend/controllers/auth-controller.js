@@ -20,7 +20,8 @@ class AuthController {
 
         // send OTP
         try {
-            await otpService.sendBySms(phone, otp);
+            // await otpService.sendBySms(phone, otp);
+            console.log('otp sent',otp,phone);
             res.json({
                 hash: `${hash}.${expires}`,
                 phone,
