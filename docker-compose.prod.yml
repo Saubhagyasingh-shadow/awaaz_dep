@@ -7,7 +7,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - /var/databases/mongodb/codershouse-data:/data/db
+      - C:/Users/kavit/OneDrive/Desktop/code-data:/data/db
   backend:
     build:
       dockerfile: Dockerfile.prod
