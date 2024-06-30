@@ -28,13 +28,14 @@ const io = require('socket.io')(server, {
 app.use(cookieParser());
 
 const corsOption = {
-    origin: [process.env.FRONT_URL],
+    origin: [process.env.FRONT_URL, 'http://20.193.143.35'],
     credentials: true
 };
+
 app.use(cors(corsOption));
 app.use('/storage', express.static('storage'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 DbConnect();
 app.use(express.json({limit: '8mb'}));
 app.use(router);
