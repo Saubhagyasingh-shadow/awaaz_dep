@@ -14,6 +14,7 @@ class OtpService {
     }
 
     async sendBySms(phone, otp) {
+        console.log("reching here")
         return await twilio.messages.create({
             to: phone,
             from: process.env.SMS_FROM_NUMBER,
